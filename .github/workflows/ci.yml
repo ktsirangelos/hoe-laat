@@ -20,15 +20,8 @@ jobs:
           bundler-cache: true
           cache-version: ${{ github.run_id }}
 
-      - name: Update and verify Brakeman
-        run: |
-          gem uninstall brakeman -a -x || true
-          gem install brakeman -v 7.0.2
-          brakeman --version
-          bundle binstubs brakeman
-
       - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bundle exec bin/brakeman --no-pager
+        run: bin/brakeman --no-pager
 
   scan_js:
     runs-on: ubuntu-latest
