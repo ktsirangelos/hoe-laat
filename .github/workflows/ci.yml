@@ -20,8 +20,10 @@ jobs:
           bundler-cache: true
           cache-version: ${{ github.run_id }}
 
-      - name: Update Brakeman
-        run: gem install brakeman -v 7.0.2
+      - name: Update and verify Brakeman
+        run: |
+          gem install brakeman -v 7.0.2
+          brakeman --version
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
