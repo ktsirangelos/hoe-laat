@@ -22,6 +22,7 @@ jobs:
 
       - name: Update and verify Brakeman
         run: |
+          gem uninstall brakeman -a -x || true
           gem install brakeman -v 7.0.2
           brakeman --version
           bundle binstubs brakeman
