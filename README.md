@@ -17,19 +17,19 @@ Time is relative, especially when humans are involved. Don't try to fix people -
 
 ## How It Works
 
-1. **Reality Check** 🔄
+1. **Reality Check** 🔄\
    The app builds profiles so when someone says "8:00," you'll know if that's an actual 8:00 or more like 8:47.
 
-2. **Mirror Mirror** 🪞
+2. **Mirror Mirror** 🪞\
    Find out if you're actually as punctual as you think you are (spoiler: probably not).
 
-3. **Friend Groups** 👥
+3. **Friend Groups** 👥\
    Make appointments with many people at the same time and register their arrivals individually.
 
-4. **Backward Planning** ⏪
+4. **Backward Planning** ⏪\
    Need everyone there by 3:00? The app tells you what time to tell each person.
 
-5. **Location Tracking** ✅
+5. **Location Tracking** ✅\
    Location check-in system because no one wants to fill out a spreadsheet for their social life.
 
 ## Next up
