@@ -43,4 +43,4 @@ Built with Ruby on Rails, Turbo and Stimulus for interactivity, and Tailwind CSS
 
 ## Is this a joke?
 
-Probably yes! I don't know, maybe not :]
+I guess so. I don't know, maybe not :]
