@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appointment: one
+  attendee: one
+  attendee_type: Attendee
+
+two:
+  appointment: two
+  attendee: two
+  attendee_type: Attendee
