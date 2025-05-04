@@ -37,10 +37,6 @@ Time is relative, especially when humans are involved. Don't try to fix people -
 - Trend tracking (is someone getting later or earlier?)
 - Season factors (quick conclusions? everyone's later when it rains...)
 
-## Tech Stuff
-
-Built with Ruby on Rails, Turbo and Stimulus for interactivity, and Tailwind CSS for styling. Working toward PWA functionality.
-
 ## Is this a joke?
 
 I guess so. I don't know, maybe not :]
