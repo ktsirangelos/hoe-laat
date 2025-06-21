@@ -1,0 +1,22 @@
+<%= form_with(model: @contact, local: true) do |form| %>
+  <% if @contact.errors.any? %>
+    <div class="">
+      <h2><%= pluralize(@contact.errors.count, "error") %>
+        prohibited this contact from being saved:</h2>
+      <ul>
+        <% @contact.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,24 @@
+<h1>Contacts</h1>
+
+<h2 class="new-contact">
+  <%= link_to "Add new", new_contact_path %>
+</h2>
+
+<ul class="contacts-list">
+  <% @contacts.each do |contact| %>
+    <li class="contact">
+      <hr>
+      <span>
+        <%= contact.name %>
+      </span>
+      <span>
+        <%= contact.email %>
+      </span>
+      <div>
+        <%= link_to "Show", contact_path(contact) %>
+        <%= link_to "Edit", edit_contact_path(contact) %>
+        <%= link_to "Delete", confirm_destroy_contact_path(contact) %>
+      </div>
+    </li>
+  <% end %>
+</ul>

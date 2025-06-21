@@ -1,0 +1,9 @@
+<h1>
+  Delete contact
+</h1>
+
+<p>Are you sure you want to delete
+  <%= @contact.name %>
+</p>
+<%= button_to "Delete", contact_path(@contact), method: :delete %>
+<%= link_to "Cancel", contacts_path %>
