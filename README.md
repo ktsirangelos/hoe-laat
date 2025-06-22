@@ -29,11 +29,9 @@ Time is relative, especially when humans are involved. Don't try to fix people -
 4. **Backward Planning**\
    Need everyone there by 3:00? The app tells you what time to tell each person.
 
-5. **Location Tracking**\
-   Location check-in system because no one wants to fill out a spreadsheet for their social life.
-
 ## Next up
 
+- Location check-in (don't fill out a spreadsheet when you go for coffee)
 - Trend tracking (is someone getting later or earlier?)
 - Season factors (quick conclusions? everyone's later when it rains...)
 
