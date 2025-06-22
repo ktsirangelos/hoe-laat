@@ -4,6 +4,7 @@
     "sass": "^1.89.2"
   },
   "scripts": {
-    "build:css": "sass ./app/assets/stylesheets/application.scss:./public/assets/builds/application.css --no-source-map --load-path=node_modules --watch"
+    "build:css:dev": "sass ./app/assets/stylesheets/application.scss:./public/assets/builds/application.css --no-source-map --load-path=node_modules --watch",
+    "build:css:prod": "sass ./app/assets/stylesheets/application.scss:./public/assets/builds/application.css --no-source-map --load-path=node_modules"
   }
 }
