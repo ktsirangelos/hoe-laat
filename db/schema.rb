@@ -10,45 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_05_04_152621) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_22_115112) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
-
-  create_table "appointment_attendees", force: :cascade do |t|
-    t.bigint "appointment_id", null: false
-    t.string "attendee_type", null: false
-    t.bigint "attendee_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["appointment_id", "attendee_type", "attendee_id"], name: "index_appointment_attendees_on_appointment_and_attendee"
-    t.index ["appointment_id"], name: "index_appointment_attendees_on_appointment_id"
-    t.index ["attendee_type", "attendee_id"], name: "index_appointment_attendees_on_attendee"
-  end
-
-  create_table "appointments", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
-    t.datetime "scheduled_time"
-    t.bigint "creator_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["creator_id"], name: "index_appointments_on_creator_id"
-  end
-
-  create_table "arrivals", force: :cascade do |t|
-    t.bigint "appointment_id"
-    t.bigint "tracker_id", null: false
-    t.string "trackable_type", null: false
-    t.bigint "trackable_id", null: false
-    t.datetime "promised_time"
-    t.datetime "actual_time"
-    t.text "notes"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["appointment_id"], name: "index_arrivals_on_appointment_id"
-    t.index ["trackable_type", "trackable_id"], name: "index_arrivals_on_trackable"
-    t.index ["tracker_id"], name: "index_arrivals_on_tracker_id"
-  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -66,12 +30,21 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_04_152621) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
-
-  add_foreign_key "appointment_attendees", "appointments"
-  add_foreign_key "appointments", "users", column: "creator_id"
-  add_foreign_key "arrivals", "appointments"
-  add_foreign_key "arrivals", "users", column: "tracker_id"
 end
