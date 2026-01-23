@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.2"
 gem "pg", "~> 1.1"
 
-gem "devise", "~> 4.9"
+gem "devise", "~> 5.0"
 gem "cssbundling-rails"
 
 gem "puma", ">= 5.0"
